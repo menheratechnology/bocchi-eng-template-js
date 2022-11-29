@@ -3,45 +3,46 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2020: true
+    es2020: true,
   },
   extends: [
+    'next/core-web-vitals',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
-    'plugin:prettier/recommended'
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2020,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'react', 'import'],
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
       typescript: {
         config: 'tsconfig.json',
-        alwaysTryTypes: true
-      }
-    }
+        alwaysTryTypes: true,
+      },
+    },
   },
   rules: {
     '@typescript-eslint/ban-types': [
       'error',
       {
         types: {
-          '{}': false
-        }
-      }
+          '{}': false,
+        },
+      },
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
     'react/prop-types': ['off'],
@@ -57,32 +58,21 @@ module.exports = {
           'sibling',
           'index',
           'object',
-          'type'
+          'type',
         ],
         pathGroups: [
           {
             pattern: '{react,react-dom/**,react-router-dom}',
             group: 'builtin',
-            position: 'before'
-          }
+            position: 'before',
+          },
         ],
         pathGroupsExcludedImportTypes: ['builtin'],
         alphabetize: {
-          order: 'asc'
+          order: 'asc',
         },
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
-    'prettier/prettier': [
-      'error',
-      {
-        trailingComma: 'none',
-        endOfLine: 'lf',
-        semi: false,
-        singleQuote: true,
-        printWidth: 80,
-        tabWidth: 2
-      }
-    ]
-  }
+  },
 }
