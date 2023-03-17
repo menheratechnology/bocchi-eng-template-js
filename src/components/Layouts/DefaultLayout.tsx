@@ -9,6 +9,7 @@ type Props = {
 }
 
 export const DefaultLayout = ({ children }: Props): ReactElement => {
+  // recoilなどに移してローディングをグローバルで管理する
   const [loading] = useState<boolean>(false)
 
   return (

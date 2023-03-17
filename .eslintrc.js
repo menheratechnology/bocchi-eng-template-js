@@ -74,5 +74,28 @@ module.exports = {
         'newlines-between': 'always',
       },
     ],
+    // 詳細: https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/array-type.md
+    '@typescript-eslint/array-type': [
+      'error',
+      {
+        default: 'generic',
+      },
+    ],
+    // 詳細: https://eslint.org/docs/latest/rules/no-restricted-imports#rule-details
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['../'],
+      },
+    ],
+    // 詳細: https://eslint.org/docs/latest/rules/padding-line-between-statements#rule-details
+    '@typescript-eslint/padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: 'import',
+        next: ['const', 'type'],
+      },
+    ],
   },
 }
