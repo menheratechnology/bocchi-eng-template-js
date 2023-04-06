@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode } from 'react'
 
-import { PageHead } from '~/components/Head'
 import { FlexBox } from '~/components/Base/FlexBox'
+import { PageHead } from '~/components/Head'
 
 type Props = {
   children?: ReactNode
