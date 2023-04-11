@@ -46,15 +46,15 @@ export const LinkItem = ({
       {label}
     </a>
   ) : (
-    <Link href={href} target={target} passHref legacyBehavior>
-      <a
-        className={styles.linkItem}
-        style={{
-          fontSize: getFontSize(size),
-        }}
-      >
-        {label}
-      </a>
+    <Link
+      href={href}
+      target={target}
+      className={styles.linkItem}
+      style={{
+        fontSize: getFontSize(size),
+      }}
+    >
+      {label}
     </Link>
   )
 }

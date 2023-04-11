@@ -1,9 +1,9 @@
+import Image from 'next/image'
+
 import { FlexBox } from '~/components/Base/FlexBox'
 
 export const LoadingAnimation = (): React.ReactElement => (
-  <FlexBox height="100%" justify="center" align="center">
-    loading
-  </FlexBox>
+  <Image src="/images/svgs/tail-spin.svg" height="80" width="80" alt="" />
 )
 
 export const LoadingOverlay = (): React.ReactElement => (
