@@ -52,6 +52,6 @@ const uploadFile = async (path: string, blob: Blob): Promise<string> => {
   // const imageRef = ref(storage, path)
   // const snapShot = await uploadBytesResumable(imageRef, blob)
   // return getDownloadURL(snapShot.ref)
-  await console.log('upload')
+  await console.log('upload', path, blob)
   return 'file url'
 }
