@@ -1,0 +1,16 @@
+.card {
+  background-color: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #808080;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border: solid 1px #808080;
+      border-radius: 4px;
+      background-color: #ffffff;
+    }
+  }
+}
