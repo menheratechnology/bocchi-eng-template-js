@@ -1,0 +1,11 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+  p {
+    color: #808080;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
