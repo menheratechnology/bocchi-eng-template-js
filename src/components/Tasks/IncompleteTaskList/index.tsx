@@ -34,7 +34,12 @@ export const IncompleteTaskList = ({
       <div className={styles.list}>
         <p>未完了のタスク</p>
         {incompleteTasks.map((task: Task, index) => (
-          <TaskCard key={index} task={task} onClick={() => complete(index)} />
+          <TaskCard
+            key={index}
+            task={task}
+            onClick={() => complete(index)}
+            complete={false}
+          />
         ))}
       </div>
     </div>

@@ -35,7 +35,12 @@ export const CompleteTaskList = ({
       <div className={styles.list}>
         <p>完了済みのタスク</p>
         {completeTasks.map((task, index) => (
-          <TaskCard key={index} task={task} onClick={() => back(index)} />
+          <TaskCard
+            key={index}
+            task={task}
+            onClick={() => back(index)}
+            complete={true}
+          />
         ))}
       </div>
     </div>
