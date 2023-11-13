@@ -1,24 +1,22 @@
 import { useState } from 'react'
 
+import styles from './style.module.scss'
+
 import { AddTaskForm } from '~/components/Forms/AddTaskForm'
 import { CompleteTaskList } from '~/components/Tasks/CompleteTaskList'
 import { IncompleteTaskList } from '~/components/Tasks/IncompleteTaskList'
 import { Task } from '~/entities/Task'
 
 export const TopContainer = (): React.ReactElement => {
-  const [isShowAddTaskModal, setIsShowAddTaskModal] = useState(false)
   const [incompleteTasks, setIncompleteTasks] = useState<Array<Task>>([])
   const [completeTasks, setCompleteTasks] = useState<Array<Task>>([])
 
   return (
-    <div>
-      <button
-        onClick={() => {
-          setIsShowAddTaskModal(!isShowAddTaskModal)
-        }}
-      >
-        タスクの追加
-      </button>
+    <div className={styles.topWrapper}>
+      <AddTaskForm
+        incompleteTasks={incompleteTasks}
+        setIncompleteTasks={setIncompleteTasks}
+      />
       <IncompleteTaskList
         incompleteTasks={incompleteTasks}
         setIncompleteTasks={setIncompleteTasks}
@@ -31,12 +29,6 @@ export const TopContainer = (): React.ReactElement => {
         completeTasks={completeTasks}
         setCompleteTasks={setCompleteTasks}
       />
-      {isShowAddTaskModal && (
-        <AddTaskForm
-          incompleteTasks={incompleteTasks}
-          setIncompleteTasks={setIncompleteTasks}
-        />
-      )}
     </div>
   )
 }

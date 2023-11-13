@@ -1,0 +1,9 @@
+.topWrapper {
+  display: flex;
+  gap: 16px;
+  width: 80%;
+  .taskArea {
+    display: grid;
+    gap: 16px;
+  }
+}
