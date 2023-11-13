@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 
 import styles from './style.module.scss'
 
-import { SecondaryButton } from '~/Buttons/SecondaryButton'
+import { BasicButton } from '~/Buttons/BasicButton'
 import { TextAreaInput } from '~/Inputs/TextAreaInput'
 import { TextInput } from '~/Inputs/TextInput'
 import { Task } from '~/entities/Task'
@@ -47,7 +47,7 @@ export const AddTaskForm = ({
         value={description}
         placeholder="詳細を入力"
       />
-      <SecondaryButton onClick={addTask}>追加</SecondaryButton>
+      <BasicButton onClick={addTask}>追加</BasicButton>
     </div>
   )
 }
