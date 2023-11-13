@@ -29,9 +29,11 @@ export const CompleteTaskList = ({
     setIncompleteTasks(newIncompleteTasks)
   }
   return (
-    <div className={styles.listContainer}>
-      <p>完了済みのタスク</p>
+    <div className={styles.listWrapper}>
+      <div className={styles.bar} />
+
       <div className={styles.list}>
+        <p>完了済みのタスク</p>
         {completeTasks.map((task, index) => (
           <TaskCard key={index} task={task} onClick={() => back(index)} />
         ))}
