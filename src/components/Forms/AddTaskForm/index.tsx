@@ -1,5 +1,10 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 
+import styles from './style.module.scss'
+
+import { BasicButton } from '~/Buttons/BasicButton'
+import { TextAreaInput } from '~/Inputs/TextAreaInput'
+import { TextInput } from '~/Inputs/TextInput'
 import { Task } from '~/entities/Task'
 
 type Props = {
@@ -24,24 +29,25 @@ export const AddTaskForm = ({
     setIncompleteTasks(newIncompleteTasks)
   }
   return (
-    <div>
-      <label>タスク名</label>
-      <input
-        placeholder="タスク名"
+    <div className={styles.formWrapper}>
+      <p>新しいタスクを追加</p>
+      <TextInput
+        label="タスク名"
         onChange={(e) => {
           setTitle(e.target.value)
         }}
         value={title}
+        placeholder="タスク名を入力"
       />
-      <label>詳細</label>
-      <textarea
-        placeholder="詳細"
+      <TextAreaInput
+        label="詳細"
         onChange={(e) => {
           setDescription(e.target.value)
         }}
         value={description}
+        placeholder="詳細を入力"
       />
-      <button onClick={addTask}>追加</button>
+      <BasicButton onClick={addTask}>追加</BasicButton>
     </div>
   )
 }
