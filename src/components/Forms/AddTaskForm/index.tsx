@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 
 import styles from './style.module.scss'
 
+// ↓これらのコンポーネントを使ってください
 import { BasicButton } from '~/Buttons/BasicButton'
 import { TextAreaInput } from '~/Inputs/TextAreaInput'
 import { TextInput } from '~/Inputs/TextInput'
@@ -20,34 +21,16 @@ export const AddTaskForm = ({
   const [description, setDescription] = useState('')
 
   const addTask = () => {
-    const newTask: Task = {
-      title: title,
-      description: description,
-      isComplete: false,
-    }
-    const newIncompleteTasks = [...incompleteTasks, newTask]
-    setIncompleteTasks(newIncompleteTasks)
+    // TODO: タスクを追加する処理を書く
   }
   return (
     <div className={styles.formWrapper}>
       <p>新しいタスクを追加</p>
-      <TextInput
-        label="タスク名"
-        onChange={(e) => {
-          setTitle(e.target.value)
-        }}
-        value={title}
-        placeholder="タスク名を入力"
-      />
-      <TextAreaInput
-        label="詳細"
-        onChange={(e) => {
-          setDescription(e.target.value)
-        }}
-        value={description}
-        placeholder="詳細を入力"
-      />
-      <BasicButton onClick={addTask}>追加</BasicButton>
+      {/* TODO: タスク名を入力するinputを用意する */}
+
+      {/* TODO: タスクの詳細を入力するtextareaを用意する */}
+
+      {/* TODO: タスクを保存するボタンをつくる */}
     </div>
   )
 }
