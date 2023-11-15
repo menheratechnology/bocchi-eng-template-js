@@ -22,15 +22,6 @@ export const AddTaskForm = ({
 
   const addTask = () => {
     // TODO: タスクを追加する処理を書く
-    const newTask: Task = {
-      title: title,
-      description: description,
-      isComplete: false,
-    }
-
-    const newIncompleteTasks = [...incompleteTasks, newTask]
-
-    setIncompleteTasks(newIncompleteTasks)
   }
   return (
     <div className={styles.formWrapper}>
