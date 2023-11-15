@@ -36,23 +36,10 @@ export const AddTaskForm = ({
     <div className={styles.formWrapper}>
       <p>新しいタスクを追加</p>
       {/* TODO: タスク名を入力するinputを用意する */}
-      <TextInput
-        label="タスク名"
-        onChange={(e) => {
-          setTitle(e.target.value)
-        }}
-        value={title}
-      />
+
       {/* TODO: タスクの詳細を入力するtextareaを用意する */}
-      <TextAreaInput
-        label="詳細"
-        onChange={(e) => {
-          setDescription(e.target.value)
-        }}
-        value={description}
-      />
+
       {/* TODO: タスクを保存するボタンをつくる */}
-      <BasicButton onClick={addTask}>タスクを追加</BasicButton>
     </div>
   )
 }

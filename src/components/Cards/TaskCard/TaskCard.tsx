@@ -1,5 +1,6 @@
 import styles from './style.module.scss'
 
+//このコンポーネントを使ってください
 import { ActionButton } from '~/components/Buttons/ActionButton'
 import { Task } from '~/entities/Task'
 
@@ -19,9 +20,6 @@ export const TaskCard = ({
       <div className={styles.title}>
         <p>{task.title}</p>
         {/* TODO:完了,戻すボタンを作る */}
-        <ActionButton onClick={onClick} complete={complete}>
-          {task.isComplete ? '戻す' : '完了'}
-        </ActionButton>
       </div>
       <div>
         <p>{task.description}</p>

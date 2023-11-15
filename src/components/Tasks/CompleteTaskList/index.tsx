@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from 'react'
 
 import styles from './style.module.scss'
 
+//このコンポーネントを使ってください
 import { TaskCard } from '~/components/Cards/TaskCard/TaskCard'
 import { Task } from '~/entities/Task'
 
@@ -22,14 +23,6 @@ export const CompleteTaskList = ({
     {
       /* 戻るボタンの処理を書く */
     }
-    const newCompleteTasks = [...completeTasks]
-    newCompleteTasks.splice(index, 1)
-
-    completeTasks[index].isComplete = false
-    const newIncompleteTasks = [...incompleteTasks, completeTasks[index]]
-
-    setCompleteTasks(newCompleteTasks)
-    setIncompleteTasks(newIncompleteTasks)
   }
   return (
     <div className={styles.listWrapper}>
@@ -37,14 +30,7 @@ export const CompleteTaskList = ({
 
       <div className={styles.list}>
         <p>完了済みのタスク</p>
-        {completeTasks.map((task, index) => (
-          <TaskCard
-            key={index}
-            task={task}
-            onClick={() => back(index)}
-            complete={true}
-          />
-        ))}
+        {/* TODO:完了済みのタスク一覧を作成する */}
       </div>
     </div>
   )
