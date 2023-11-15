@@ -8,7 +8,14 @@ import { IncompleteTaskList } from '~/components/Tasks/IncompleteTaskList'
 import { Task } from '~/entities/Task'
 
 export const TopContainer = (): React.ReactElement => {
-  const [incompleteTasks, setIncompleteTasks] = useState<Array<Task>>([])
+  const taskPlaceHolder: Task = {
+    title: 'タスク名',
+    description: 'タスクの詳細',
+    isComplete: false,
+  }
+  const [incompleteTasks, setIncompleteTasks] = useState<Array<Task>>([
+    taskPlaceHolder,
+  ])
   const [completeTasks, setCompleteTasks] = useState<Array<Task>>([])
 
   return (
