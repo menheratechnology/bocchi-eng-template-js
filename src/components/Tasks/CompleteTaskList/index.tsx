@@ -19,6 +19,9 @@ export const CompleteTaskList = ({
   completeTasks,
 }: Props): React.ReactElement => {
   const back = (index: number) => {
+    {
+      /* 戻るボタンの処理を書く */
+    }
     const newCompleteTasks = [...completeTasks]
     newCompleteTasks.splice(index, 1)
 

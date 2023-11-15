@@ -18,6 +18,9 @@ export const IncompleteTaskList = ({
   completeTasks,
 }: Props): React.ReactElement => {
   const complete = (index: number) => {
+    {
+      /* TODO:完了ボタンの処理を書く */
+    }
     const newIncompleteTasks = [...incompleteTasks]
     newIncompleteTasks.splice(index, 1)
 
