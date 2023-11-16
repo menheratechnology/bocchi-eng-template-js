@@ -44,7 +44,7 @@ export const CompleteTaskList = ({
             key={index}
             task={task}
             onClick={() => back(index)}
-            complete={true}
+            complete={task.isComplete}
           />
         ))}
       </div>

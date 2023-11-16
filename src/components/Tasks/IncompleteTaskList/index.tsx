@@ -43,7 +43,7 @@ export const IncompleteTaskList = ({
             key={index}
             task={task}
             onClick={() => complete(index)}
-            complete={false}
+            complete={task.isComplete}
           />
         ))}
       </div>
