@@ -18,6 +18,7 @@ export const IncompleteTaskList = ({
   setCompleteTasks,
   completeTasks,
 }: Props): React.ReactElement => {
+  console.log('🚀 ~ file: index.tsx:21 ~ incompleteTasks:', incompleteTasks)
   const complete = (index: number) => {
     {
       /* TODO:完了ボタンの処理を書く */
@@ -30,6 +31,16 @@ export const IncompleteTaskList = ({
       <div className={styles.list}>
         <p>未完了のタスク</p>
         {/* TODO:未完了のタスク一覧を作成する */}
+        {incompleteTasks.map((value, index) => {
+          return (
+            <TaskCard
+              task={value}
+              key={index}
+              complete={false}
+              onClick={() => complete(index)}
+            />
+          )
+        })}
       </div>
     </div>
   )
