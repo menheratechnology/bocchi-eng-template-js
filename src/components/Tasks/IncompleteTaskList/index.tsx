@@ -22,6 +22,14 @@ export const IncompleteTaskList = ({
     {
       /* TODO:完了ボタンの処理を書く */
     }
+    const newIncompleteTasks = [...incompleteTasks]
+    newIncompleteTasks.splice(index, 1)
+
+    incompleteTasks[index].isComplete = true
+    const newCompleteTasks = [...completeTasks, incompleteTasks[index]]
+
+    setIncompleteTasks(newIncompleteTasks)
+    setCompleteTasks(newCompleteTasks)
   }
   return (
     <div className={styles.listWrapper}>
@@ -30,6 +38,14 @@ export const IncompleteTaskList = ({
       <div className={styles.list}>
         <p>未完了のタスク</p>
         {/* TODO:未完了のタスク一覧を作成する */}
+        {incompleteTasks.map((task: Task, index) => (
+          <TaskCard
+            key={index}
+            task={task}
+            onClick={() => complete(index)}
+            complete={task.isComplete}
+          />
+        ))}
       </div>
     </div>
   )
