@@ -27,10 +27,13 @@ export const AddTaskForm = ({
     <div className={styles.formWrapper}>
       <p>新しいタスクを追加</p>
       {/* TODO: タスク名を入力するinputを用意する */}
+      <TextInput />
 
       {/* TODO: タスクの詳細を入力するtextareaを用意する */}
+      <TextAreaInput />
 
       {/* TODO: タスクを保存するボタンをつくる */}
+      <BasicButton>追加</BasicButton>
     </div>
   )
 }
