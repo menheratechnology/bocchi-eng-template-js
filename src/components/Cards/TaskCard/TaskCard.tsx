@@ -20,6 +20,9 @@ export const TaskCard = ({
       <div className={styles.title}>
         <p>{task.title}</p>
         {/* TODO:完了,戻すボタンを作る */}
+        <ActionButton complete={complete} onClick={onClick}>
+          {complete ? '戻る' : '完了'}
+        </ActionButton>
       </div>
       <div>
         <p>{task.description}</p>
