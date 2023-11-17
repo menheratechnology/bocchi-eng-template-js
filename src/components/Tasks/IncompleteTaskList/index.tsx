@@ -18,7 +18,6 @@ export const IncompleteTaskList = ({
   setCompleteTasks,
   completeTasks,
 }: Props): React.ReactElement => {
-  console.log('🚀 ~ file: index.tsx:21 ~ incompleteTasks:', incompleteTasks)
   const complete = (index: number) => {
     {
       /* TODO:完了ボタンの処理を書く */
